@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<style>
-        	dt::before {
-        	content: "❤ ";
-        	color: rgb(130, 104, 111);
-        	margin-right: 0.2em; }
-    	</style>
-	<meta charset="UTF-8">
-        <title> Index Parcial 1</title>
+    <style>
+        .grupo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+        .grupo a {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgb(130, 104, 111);
+            border-radius: 12px;
+            padding: 8px;
+            color: rgb(94, 29, 59);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .grupo a:hover {
+            background-color: rgb(255, 214, 229);
+        }
+        .grupo a::before {
+            content: "❤ ";
+            color: rgb(130, 104, 111);
+        }
+    </style>
+		<meta charset="UTF-8">
+		<title> Index Parcial 1</title>
 		<link rel="icon" type="image/x-icon" href="assets/mysweetpiano-icon.png">
-    </head>
+	</head>
+
+
 	<body style="text-align: center; background-color: #F5F2F3; background-image: url('assets/19e7.gif'); background-size: cover; font-family: Georgia;">
 		<br><br>
 		<p> <img src="assets/flor.jpg"
