@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<style>
+form {
+  border-radius: 5px;
+  background-image: url("assets/19e7.gif");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+label {display: block;}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #edafd1;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=text]:focus {
+  background-color: rgb(233, 195, 210);
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: rgb(163, 87, 124);
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(190, 114, 164);
+}
+</style>
+<body>
+
+<h2>Style an HTML Form with CSS</h2>
+
+<form action="/action_page.php">
+  <label for="fname">Nombre</label>
+  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+  <label for="lname">Apellido</label>
+  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+  <label for="tel">Telefono</label>
+  <input type="number" id="tel" name="telefono" placeholder="Your phone number..">
+
+  <label for="carrera">Carrera</label>
+  <select id="carrera" name="carrera">
+    <option value="ingenieria">Ingeniería en Tecnologías de la Información</option>
+    <option value="administracion">Licenciatura en Administración</option>
+    <option value="manufactura">Ingeniería en Tecnologías de Manufactura </option>
+    <option value="mercadotecnia">Licenciatura en Mercadotecnia Internacional </option>
+  </select>
+  
+  <footer> Renata Rodríguez Martínez | 189363 </footer>
+
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

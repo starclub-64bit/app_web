@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(242, 188, 204);
+  position: relative;
+  animation-name: myAnimation;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 4;
+  animation-direction: reverse;
+}
+
+@keyframes myAnimation {
+  0%   {background-color:rgb(255, 122, 222); left:0px; top:0px;}
+  25%  {background-color:rgb(223, 149, 255); left:200px; top:200px;}
+  50%  {background-color:rgb(136, 136, 255); left:400px; top:0px;}
+  75%  {background-color:rgb(152, 219, 255); left:600px; top:200px;}
+  95% {background-color:rgb(177, 255, 239); left:800px; top:0px;}
+  100% {background-color:rgb(156, 243, 179); left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+    <h1>CSS animation-delay Property</h1>
+    <p>The animation-delay property specifies a delay for the start of an animation. The following example has a 2 seconds delay before starting the animation:</p>
+    <div></div>
+    <footer> Renata Rodríguez Martínez | 189363 </footer>
+</body>
+</html>
