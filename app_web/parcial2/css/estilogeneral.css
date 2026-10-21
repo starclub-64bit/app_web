@@ -5,7 +5,7 @@ header {
     text-align: center;
 }
 
-footer {
+/*footer {
     background-image: url("../assets/19e7.gif");
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,6 +13,14 @@ footer {
     background-attachment: fixed;
     margin: 0;
     color: rgb(246, 240, 240);
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}*/
+
+footer {
+    background-color: #957186;
+    color: rgb(255, 255, 255);
     padding: 10px;
     text-align: center;
     font-size: 12px;
