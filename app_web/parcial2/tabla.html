@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Tabla Aleatoria</title>
+    <style>
+        .tabla {
+            border: 1px solid blue;           
+            margin: 0 auto; 
+        }
+        th, td {
+            border: 1px solid black;            
+            text-align: center;
+            width: 100px;
+            height: 100px;
+
+        }
+         #btnAlerta {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .contenedor {
+            height: 100vh;
+            text-align: center;
+        }
+         img {
+            width: 100px;
+            
+        }
+                
+    </style>    
+</head>
+<body>
+    <div class="contenedor">
+        <button id="btnAlerta" onclick=" generarTablaImagenes()">Haz clic aqui</button>
+        <div id="tabla_dinamica">
+            <table class="tabla">
+                <tr>
+                    <td>a</td>
+                    <td>d</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+       function generarTablaImagenes() {
+        // Definir el arreglo de números y un arreglo para verificar si ya se ha usado un número
+            // Arreglo de números del 1 al 9
+    let numeros = []; // o [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let check = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    let numaleatorio = 0, cont = 0, i = 0, j = 0;
+
+    // Generar números aleatorios del 1 al 9 sin repetir
+    for (i = 0; i < 9; i++) {
+        do {
+            numaleatorio = Math.floor(Math.random() * 9);
+        } while (check[numaleatorio] == 1);
+
+        check[numaleatorio] = 1;
+        numeros[i] = numaleatorio + 1;
+    }
+
+    // Construcción de la tabla 3x3
+    let html_txt = "<table class='tabla'>";
+    for (i = 0, cont = 0; i < 3; i++) { // coma aquí: i = 0, cont = 0
+        html_txt += "<tr>";
+        for (j = 0; j < 3; j++, cont++) {
+            html_txt += "<td><img src='img/" + numeros[cont] + ".jpg'></td>";
+        }
+        html_txt += "</tr>";
+    }
+    html_txt += "</table>";
+
+    document.getElementById("tabla_dinamica").innerHTML = html_txt;
+}
+    </script>
+</body>
+</html>
