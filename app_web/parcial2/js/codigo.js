@@ -1,1 +1,1 @@
-alert("Un mensaje de prueba");
+alert("Hola Mundo soy Rena! <3");
