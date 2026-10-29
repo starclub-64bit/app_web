@@ -1,0 +1,26 @@
+.contenedor-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 220px); 
+    gap: 15px;                               
+    justify-content: center;                 
+    margin: 20px auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 10px 15px;
+    background: #ffc9e3;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #7b5361;
+    font-size: 14px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.menu:hover {
+    transform: scale(1.05);
+    background: #ffd7f3;
+}
