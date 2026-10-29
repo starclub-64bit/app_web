@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Tabla Aleatoria</title>
+    <style>
+        .tabla {
+            border: 1px solid blue;           
+            margin: 0 auto; 
+            align-items: center;
+        }
+        th {           
+            text-align: center;
+            background-color: #3c2d40;
+            color: white;
+            width: 130px;
+
+        }
+
+        td {
+            text-align: center;
+            
+        }
+
+        .filaClaro {
+            background-color: #ede0f5;
+        }
+
+        .filaOscuro {
+            background-color: #ab85c2;
+        }
+
+         #btnAlerta {
+            background-color: #7c4caf;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 15px;
+            border-radius: 5px;
+            text-align: center;
+            place-items: center;
+        }
+
+        .contenedor {
+            margin: 0 auto;
+            align-items: center;
+        }   
+
+        body {
+            place-items: center; 
+        }   
+
+        </style>
+        </head>
+
+<body class="contenedor">
+        <button id="btnAlerta" onclick=" generarTablas()">Crear Tablas</button>
+        <div id="tabla_dinamica">
+            <table class="tabla_1">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Calificación1</th>
+                    <th>Calificación2</th>
+                    <th>Calificación3</th>
+                </tr>
+                <tr class="filaClaro">
+                    <td>alumno 1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="filaOscuro">
+                    <td>alumno 2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="filaClaro">
+                    <td>alumno 3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="filaOscuro">
+                    <td>alumno 4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="filaClaro">
+                    <td>alumno 5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    
+        <br>
+        <div id="tabla_dinamica2">
+            <table class="tabla_2">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Calificación1</th>
+                    <th>Calificación2</th>
+                    <th>Calificación3</th>
+                    <th>Promedio</th>
+                </tr>
+                <tr class="filaClaro">
+                    <td>alumno 1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="filaOscuro">
+                    <td>alumno 2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="filaClaro">
+                    <td>alumno 3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="filaOscuro">
+                    <td>alumno 4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="filaClaro">
+                    <td>alumno 5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </table>
+            </div>
+
+            <script>
+                function generarTablas() {
+                    var tabla1 = document.querySelector('.tabla_1');
+                    var tabla2 = document.querySelector('.tabla_2');
+
+                    for (var i = 1; i < tabla1.rows.length; i++) {
+                        for (var j = 1; j < tabla1.rows[i].cells.length; j++) {
+                            var calificacionDecimal = Math.floor(Math.random() * 101) / 10;
+                             tabla1.rows[i].cells[j].textContent = calificacionDecimal;
+                        }
+                    }
+
+                    for (var i = 1; i < tabla2.rows.length; i++) {
+                        var suma = 0;
+                        for (var j = 1; j < tabla2.rows[i].cells.length - 1; j++) {
+                            var calificacion = Math.floor(Math.random() * 11); 
+                            tabla2.rows[i].cells[j].textContent = calificacion;
+                            suma += calificacion;
+                        }
+                        var promedio = suma / (tabla2.rows[i].cells.length - 2);
+                        tabla2.rows[i].cells[tabla2.rows[i].cells.length - 1].textContent = promedio.toFixed(2);
+                    }
+                    
+
+                }
+            </script>
+</body>
+</html>

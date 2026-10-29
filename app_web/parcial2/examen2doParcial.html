@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <title> Examen 2do Parcial </title>
+    <style>
+        #btnAlerta {
+            background-color: #af4c82;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 15px;
+            border-radius: 5px;
+        }
+
+        .tabla {
+            border: 3px solid fuchsia;           
+            margin: 0 auto; 
+            align-items: center;
+        }
+
+        th {           
+            text-align: center;
+            background-color: #57294a;
+            color: white;
+            width: 230px;
+
+        }
+
+        .filaClaro {
+            background-color: #f5e0ec;
+        }
+
+        .filaOscuro {
+            background-color: #c49db9;
+        }
+
+        .contenedor {
+            margin: 0 auto;
+            align-items: center;
+        }  
+
+        body {
+            background-image: url("19e7.gif");
+            background-size: cover;
+            place-items: center; 
+            align-items: center;
+        } 
+
+        header {
+            text-align: left;
+            background-color: #57294a;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            height: 50px;
+        }
+
+        footer {
+            text-align: left;
+            background-color: #57294a;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            height: 50px;
+        }
+
+        .animacion_barra  {
+            width: 10px;
+            height: 25px;
+            background-color: rgb(230, 136, 174);
+            transition: width 1s;
+                }
+
+        div {
+            text-align: center;
+            align-items: center;
+        }
+
+    </style>
+    </head>
+
+    <header>
+        <h1> Prestamos </h1>
+    </header>
+
+    <body class="contenedor">
+        <div><button id="btnAlerta" onclick=" mostrarPorcentaje()"> Reporte de Prestamos </button></div>
+        <br>
+        <br>
+        <br>
+        <div id="tabla">
+            <table class="tabla_Prestamos">
+                <tr>
+                    <th>Libro</th>
+                    <th>Cantidad de Libros Disponibles Aleatorios</th>
+                    <th>Barra de Porcentaje de Usados</th>
+                    <th>Porcentaje de Usados Aleatorio</th>
+                </tr>
+                <tr class="filaClaro">
+                    <td>Cien Años de Soledad</td>
+                    <td></td>
+                    <td><div class="animacion_barra"></div></td>
+                    <td></td>
+                </tr>
+                <tr class="filaOscuro">
+                    <td>El principito</td>
+                    <td></td>
+                    <td><div class="animacion_barra"></div></td>
+                    <td></td>   
+                </tr>
+                <tr class="filaClaro">
+                    <td>Don Quijote</td>
+                    <td></td>
+                    <td><div class="animacion_barra"></div></td>
+                    <td></td>
+                </tr>
+                <tr class="filaOscuro">
+                    <td>Harry Poter</td>
+                    <td></td>
+                    <td><div class="animacion_barra"></div></td>
+                    <td></td>
+                </tr>
+                <tr class="filaClaro">
+                    <td>La Odisea</td>
+                    <td></td>
+                    <td><div class="animacion_barra"></div></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <p> Renata Rodríguez Martínez | 189363 </p>
+        </footer>
+        <script>
+            function mostrarPorcentaje() {
+                var filas = document.querySelectorAll(".tabla_Prestamos tr");
+                for (var i = 1; i < filas.length; i++) {
+                    var cantidadDisponible = Math.floor(Math.random() * 100) + 1;
+                    var porcentajeUsado = Math.floor(Math.random() * 100) + 1;
+                    filas[i].cells[1].textContent = cantidadDisponible;
+                    filas[i].cells[3].textContent = porcentajeUsado + "%";
+                }
+                for (var i = 1; i < filas.length; i++) {
+                    var barra = filas[i].cells[2].querySelector(".animacion_barra");
+                    barra.style.width = filas[i].cells[3].textContent; 
+                }
+            }
+        </script>
+    </body>
+
+
+
+</html>
