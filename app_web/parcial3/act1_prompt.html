@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Actividad 1</title>
+  </head>
+
+<body>
+  <header>
+    <h1>Actividad 1</h1>
+  </header>
+
+<h1>Prompt</h1>
+
+<p>Clic en el boton</p>
+
+<button onclick="myFunction()">Boton</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let person = prompt("Nombre", "Juan Perez");
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hola " + person + "! Como estas?";
+  }
+}
+</script>
+
+  <footer>
+    <p>Renata Rodríguez Martínez | 189363</p>
+  </footer>
+</body>
+</html>

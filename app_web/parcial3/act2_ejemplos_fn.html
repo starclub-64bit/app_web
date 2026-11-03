@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Actividad 2</title>
+  </head>
+<body>
+  <header>
+    <h1>Actividad 2</h1>
+  </header>
+
+<h1>Ejemplos</h1>
+
+<p>Clic en el boton</p>
+
+<button onclick="myFunction()">Boton</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var mensaje = "Hola Mundo";
+  var numeroLetras = mensaje.length; // numeroLetras = 10
+ 
+  document.getElementById("demo").innerHTML =
+    "Cant de caracteres " + numeroLetras ;
+ 
+
+  var mensaje1 = "Hola";
+  var mensaje2 = " Mundo";
+  mensaje = mensaje1 + mensaje2; // mensaje = "Hola Mundo"
+  alert( mensaje );
+
+  var mensaje1 = "Hola";
+  var mensaje2 = mensaje1.concat(" Mundo"); // mensaje2 = "Hola Mundo“
+  alert( mensaje2 );
+
+  var variable1 = "Hola ";
+  var variable2 = 3;
+  mensaje = variable1 + variable2; // mensaje = "Hola 3"
+  alert( mensaje );
+
+  var mensaje1 = "Hola";
+  var mensaje2 = mensaje1.toUpperCase(); // mensaje2 = "HOLA“
+  alert( mensaje2 );
+
+  var mensaje1 = "HolA";
+  var mensaje2 = mensaje1.toLowerCase(); // mensaje2 = "hola"
+  alert( mensaje2 );  
+
+  var mensaje = "Hola";
+  var letra = mensaje.charAt(0); // letra = H
+  letra = mensaje.charAt(2); // letra = l
+  alert( letra );
+
+  var mensaje = "Hola";
+  var posicion = mensaje.indexOf('a'); // posicion = 3
+  alert( posicion );
+  posicion = mensaje.indexOf('b'); // posicion = -1
+  alert( posicion );
+
+}
+</script>
+
+  <footer>
+    <p>Renata Rodríguez Martínez | 189363</p>
+  </footer>
+</body>
+</html>
