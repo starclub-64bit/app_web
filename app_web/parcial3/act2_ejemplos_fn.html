@@ -6,7 +6,7 @@
   </head>
 <body>
   <header>
-    <h1>Actividad 2</h1>
+    <h1>Actividad 2 - Ejemplos</h1>
   </header>
 
 <h1>Ejemplos</h1>
@@ -58,6 +58,49 @@ function myFunction() {
   alert( posicion );
   posicion = mensaje.indexOf('b'); // posicion = -1
   alert( posicion );
+
+  var mensaje = "Hola";
+  var posicion = mensaje.lastIndexOf('a'); // posicion = 3
+  alert( posicion );
+  posicion = mensaje.lastIndexOf('b'); // posicion = -1
+  alert( posicion );
+
+  var mensaje = "Hola Mundo";
+  var porcion = mensaje.substring(2); // porcion = "la Mundo"
+  alert( porcion );
+  porcion = mensaje.substring(5); // porcion = "Mundo"
+  alert( porcion );
+  porcion = mensaje.substring(7); // porcion = "ndo“
+  alert( porcion );
+
+  //Si se indica un inicio negativo, se devuelve la misma cadena original:
+  var mensaje = "Hola Mundo";
+  var porcion = mensaje.substring(-2); // porcion = "Hola Mundo"
+  alert( porcion );
+
+  var mensaje = "Hola Mundo";
+  var porcion = mensaje.substring(1, 8); // porcion = "ola Mun"
+  alert( porcion );
+  porcion = mensaje.substring(3, 3); // porcion = "a“
+  alert( porcion );
+
+  var mensaje = "Hola Mundo";
+  var porcion = mensaje.substring(5, 0); // porcion = "Hola "
+  alert( porcion );
+  porcion = mensaje.substring(0, 2); // porcion = "Hola "
+  alert( porcion );
+
+  var mensaje = "Hola Mundo, soy una cadena de texto!";
+  var palabras = mensaje.split(" ");
+  // palabras = ["Hola", "Mundo,", "soy", "una", "cadena", "de", "texto!"];
+  alert( palabras );
+
+  var palabra = "Hola";
+  var letras = palabra.split(""); // letras = ["H", "o", "l", "a"]
+  alert( letras );
+
+
+
 
 }
 </script>

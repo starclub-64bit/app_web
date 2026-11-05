@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Actividad 3</title>
+    </head>
+    <body>
+        <header>
+            <h1>Actividad 3 - Ejercicio</h1>
+        </header>
+
+        <p>Clic en el boton</p>
+
+        <button onclick="myFunction()">Boton</button>
+
+        <p id="demo"></p>
+
+        <script>
+        function myFunction() {
+            let texto = prompt("Ingresa un texto: ");
+
+            if (texto) {
+            let palabras = texto.split(" ");
+
+            for (let i = 0; i < palabras.length; i++) {
+                palabras[i] = palabras[i].substring(0, 1).toUpperCase() + palabras[i].substring(1);
+            }
+
+            document.getElementById("demo").innerHTML = palabras.join(" ");
+            alert(palabras);
+            }
+        }
+        </script>
+
+
+
+        <footer>
+            <p>Renata Rodríguez Martínez | 189363</p>
+        </footer>
+    </body>
+</html>
