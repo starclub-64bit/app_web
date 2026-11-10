@@ -1,0 +1,22 @@
+header {
+    background-image: url("../assets/White_lily_lobby_background.webp");
+    width: cover; height: 200px;
+    background-position: center;
+    color: white;
+    border: 5px solid rgb(75, 187, 142);
+    text-align: center;
+    text-decoration: 5px solid rgb(75, 187, 142);
+}
+
+body {
+    background-color:rgb(183, 224, 216);
+}
+
+footer {
+    align-items: center;
+    background-image: url("../assets/White_lily_gacha_sequence_background_1.webp");
+    text-align: center;
+    width: 100%; height: 200px;
+    color: rgb(65, 124, 145);
+    text-decoration: bold;
+}

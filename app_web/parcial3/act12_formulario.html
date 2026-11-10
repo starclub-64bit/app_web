@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm() {
+                let x = document.forms["myForm"]["fname"].value;
+                let text = "";
+                if (x == "") {
+                    alert("Ingrese nombre");
+                    return false;
+                }
+                else text += "Nombre OK<br>";
+                let y = document.getElementById("num").value;
+                if (isNaN(y) || y < 1 || y > 100) {
+                    alert("Ingrese edad");
+                    return false;
+                } else {
+                    text += "Edad OK<br>";
+                }
+                let z = document.forms["myForm"]["RFC"].value;
+            if (z == "") {
+                    alert("Ingrese RFC");
+                    return false;
+                }
+                else text += "RFC OK<br>";	 	
+                document.getElementById("demo").innerHTML = text;
+                return false;
+            }
+        </script>
+    </head>
+
+
+    <body>
+    <br>
+        <form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+            Name:   <input type="text" name="fname">
+            <br><br>
+            Edad:   <input id="num" type="text">
+            <br><br>
+            RFC:    <input type="text" name="RFC" required>
+            <br><br>
+            <input type="submit" value="Submit">
+            
+            <p id="demo"></p>
+        </form>
+
+    </body>
+</html>
+

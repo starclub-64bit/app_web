@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <header>
+        <h1>Actividad 6 - DOM</h1>
+    </header>
+<body>
+    <a id="enlace" href="http://google.com">Enlace</a>
+    <button onclick="clic()">Clic</button>
+
+    <img id="imagen" style="margin:0; border:0; width: 100px; height: 100px;" 
+    src="assets/descarga (4).jpg" ondblclick="dobleClic()">
+    <button onclick="margen()">Clic</button>
+    <script>
+        function clic(){
+            var enlace = document.getElementById("enlace");
+            alert(enlace.href); 
+        }
+
+        function margen(){
+            var imagen = document.getElementById("imagen");
+            alert(imagen.style.margin);
+
+        }
+
+        function dobleClic(){
+            var imagen = document.getElementById("imagen");
+            imagen.style.width = "400px";
+            imagen.style.height = "400px";
+        }
+
+        //function clic(){
+        //    var imagen = document.getElementById("imagen");
+        //    imagen.style.width = "100px";
+        //}
+    </script>
+
+    <footer>
+        <p>Renata Rodríguez Martínez | 189363</p>
+    </footer>
+</body>
+</html>
