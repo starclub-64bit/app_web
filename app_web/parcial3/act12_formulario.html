@@ -7,30 +7,31 @@
                 let text = "";
                 if (x == "") {
                     alert("Ingrese nombre");
-                    return false;
                 }
-                else text += "Nombre OK<br>";
+                else text += "Nombre OK \n";
                 let y = document.getElementById("num").value;
-                if (isNaN(y) || y < 1 || y > 100) {
-                    alert("Ingrese edad");
-                    return false;
+                if (isNaN(y) || y < 1 || y > 50) {
+                    alert("Ingrese edad ");
                 } else {
-                    text += "Edad OK<br>";
+                    text += "Edad OK \n";
                 }
                 let z = document.forms["myForm"]["RFC"].value;
             if (z == "") {
-                    alert("Ingrese RFC");
-                    return false;
+                    alert("Ingrese RFC ");
                 }
-                else text += "RFC OK<br>";	 	
+                else text += "RFC OK \n";	 	
                 document.getElementById("demo").innerHTML = text;
-                return false;
+                console.log(text);
+                alert(text);
             }
         </script>
     </head>
 
 
     <body>
+        <header>
+            <h1>Actividad 12 - Formulario</h1>
+        </header>
     <br>
         <form name="myForm" action="#" onsubmit="return validateForm()" method="post">
             Name:   <input type="text" name="fname">
@@ -44,6 +45,9 @@
             <p id="demo"></p>
         </form>
 
+        <footer>
+            <p>Renata Rodríguez Martínez | 189363</p>
+        </footer>
     </body>
 </html>
 

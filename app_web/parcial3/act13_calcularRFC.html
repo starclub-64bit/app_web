@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CALCULAR RFC</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/general.css" media="all">
+	<style type="text/css">
+		#contenido{
+			width: 800px;
+			height: 500px;
+			background-color: #ffeaf5;
+			border: 1px solid #4c363d;
+			padding: 25px;
+			text-align: center;
+			align-items: center;
+		}
+	</style>
+	<script type="text/javascript">
+	function RFC()
+	{
+		let nombre = document.getElementById("nombre").value;
+		let apellidoP = document.getElementById("apellidoP").value;
+		let apellidoM = document.getElementById("apellidoM").value;
+		let anio = document.getElementById("anio").value;
+		let mes = document.getElementById("mes").value;
+		let dia = document.getElementById("dia").value;
+
+		if(nombre == "" || apellidoP == "" || apellidoM == "" || anio == "" || mes == "" || dia == "")
+		{
+			alert("Por favor, complete todos los campos.");
+			return;
+		}
+
+		if(anio < 1950 || anio > 2008)
+		{
+			alert("Ingrese un año válido entre 1950 y 2008.");
+			return;
+		}
+
+		if(mes < 10)
+		{
+			mes = "0" + mes;
+		}
+
+		if(dia < 10)
+		{
+			dia = "0" + dia;
+		}
+
+		let letras = ["A","B","C","D","E","F","G","H","I","J","K","L","M",
+			"N","O","P","Q","R","S","T","U","V","W","X","Y",
+			"Z"];
+		let homoclave = "";
+		homoclave += Math.floor(Math.random() * 10);
+		homoclave += letras[Math.floor(Math.random() * letras.length)];
+		homoclave += letras[Math.floor(Math.random() * letras.length)];
+
+		let rfc = apellidoP.substring(0, 2).toUpperCase() + apellidoM.substring(0, 1).toUpperCase() + nombre.substring(0, 1).toUpperCase() + anio.substring(2, 4) + mes + dia + homoclave;
+		document.getElementById("rfcgenerado").value = rfc;
+		alert("RFC generado: " + rfc);
+	}
+	</script>
+</head>
+<body>
+	<header>	
+		<h1> Actividad 13 - Calcular RFC </h1>
+	</header>
+	<div align="center" id="contenido">
+		<form><label><h1>DATOS RFC</h1></label>
+		</br></br>
+		<label>Ingrese su nombre</label>
+		<input type="text" name="nombre" id="nombre" placeholder="Ingrese solo su nombre" required/></br>
+		<label>Ingrese su apellido paterno</label>
+		<input type="text" name="apellidoP" id="apellidoP" placeholder="Ingrese solo su apellido paterno" required/></br>
+		<label>Ingrese su apellido materno</label>
+		<input type="text" name="apellidoM" id="apellidoM" placeholder="Ingrese solo su apellido materno" required/></br>
+		<h4>FECHA DE NACIMIENTO</h4>
+		<label>Ingrese su año de nacimiento</label>
+		<input type="text" name="anio" id="anio" placeholder="Ingrese solo su año de nacimiento" required/></br>
+		<label>Ingrese su mes de nacimiento</label>
+		<input type="text" name="mes" id="mes" placeholder="Ingrese solo su mes de nacimiento" required/></br>
+		<label>Ingrese su dia de nacimiento</label>
+		<input type="text" name="dia" id="dia" placeholder="Ingrese solo su dia de nacimiento" required/></br>
+		<p>Ingrese Su Genero</p>
+		<input type="radio" name="genero" value="M"/> Hombre
+		<input type="radio" name="genero" value="F"/> Mujer
+		</br></br>
+		<input type="button" name="" id="" value="ENVIAR DATOS PARA OBTENER RFC" onclick="RFC()"></br>
+		<label>RFC generado:</label>
+		<input type="text" name="" id="rfcgenerado" size="35">
+		</br>
+		</form>
+	</div>
+	<footer>
+        <p>Renata Rodríguez Martínez | 189363</p>
+    </footer>
+</body>
+</html>
