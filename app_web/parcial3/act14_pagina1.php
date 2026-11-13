@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Ejemplo saludo</title>
         <link rel="stylesheet" href="css/general.css">
     </head>
